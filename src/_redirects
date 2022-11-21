@@ -1,0 +1,11 @@
+---
+---
+{% for post in site.directory %}
+
+/{{ post.domain | downcase }}     {{ post.redirect_to }}
+
+{% endfor %}
+
+/     {% for post in site.directory %}{% if post.domain == 'index' %}{{ post.redirect_to }}{% endif %}{% endfor %}
+
+/*     {% for post in site.directory %}{% if post.domain == '404' %}{{ post.redirect_to }}{% endif %}{% endfor %}

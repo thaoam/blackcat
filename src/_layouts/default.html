@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <!-- Meta setup -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="blackcat" />
+    <meta name="decription" content="developed by ninja, owned by ninja tiny kingdom llc. this URL shortening service for private customer only." />
+
+    <!-- Title -->
+    <title>Blackcat is a URL shortening service owned by Ninja Tiny Kingdom, LLC.</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="/img/favicon.png" />
+
+    <!-- Include Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+<style type="text/css">
+*{
+    margin:0;
+    padding: 0;
+}
+
+body {	
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;    
+	background: #fff;
+	color: #333333;	
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    color: white; 
+    background: orange;
+}
+
+::-webkit-selection {
+    color: white; 
+    background: orange;
+}
+
+::-moz-selection {
+    color: white; 
+    background: orange;
+}
+
+@font-face {
+    font-family: "LL Circular Bold Web";
+    src: url("fonts/lineto-circular-bold.eot");
+    src: url("fonts/lineto-circular-bold.eot?#iefix") format("embedded-opentype"),
+         url("fonts/lineto-circular-bold.woff2") format("woff2"),
+         url("fonts/lineto-circular-bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.scrolltotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    background: rgba(0,0,0,.5);   
+    text-align: center;
+    padding-top: 8px;
+    font-size: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    display: none;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+}
+
+.scrolltotop:hover {   
+    background: #000;
+    color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.5);   
+}
+
+
+/*--- header-area start ---*/
+.header {
+    background-color: #fff;
+    
+}
+
+.head {
+    padding: 32px 0px 58px;
+    border-bottom: 3px solid #5F5F5F;
+}
+
+.header img  {
+    max-width: 136px;
+    height: 29px;
+    margin-top: 10px;
+    display: block;
+    transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+}
+
+.header img:hover {
+    opacity: 0.5;
+}
+
+.logo {
+    float: left;
+}
+
+/*visit-button*/
+@font-face {
+    font-family: "LL Circular Book Web";
+    src: url("fonts/lineto-circular-book.eot");
+    src: url("fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"),
+         url("fonts/lineto-circular-book.woff2") format("woff2"),
+         url("fonts/lineto-circular-book.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.visit-btn {
+    float: right;
+    height: 40px;
+    display: inline-block;
+    white-space: normal;
+    
+}
+
+.visit-btn a {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    background-color: #3c4cfc !important;
+    line-height: 16px !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 16px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
+
+}
+
+.visit-btn a:hover {
+    transition: all 0.4s ease;
+    box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.35);
+}
+
+/*middle-area start*/
+
+.mid {
+    padding: 40px 15px 90px;
+}
+
+.middle h2 {
+        font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    font-size: 37px;
+    letter-spacing: 0;
+    line-height: 48px !important;
+    margin-top: 62px;
+}
+
+.middle span {
+    display: block;
+    background: #FFD300;
+    height: 3px;
+    width: 96px;
+    margin: 40px 0px 35px;
+}
+
+.middle p {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 20px;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+}
+.middle a {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 20px;
+    color: #3C4DFF;
+    text-decoration: underline;
+}
+
+.ds-none {
+    display: none;
+}
+
+.m-none img {
+    max-width: 450px !important;
+}
+
+/*---footer-area start---*/
+.footer {
+    background: #fff;
+    padding: 15px 15px 60px;
+    border-top: 3px solid #5F5F5F;
+}
+
+.footer ul li {
+    display: inline;
+}
+
+.footer ul li a {
+    font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: -15px;
+}
+
+.footer ul li:last-child {
+    color: #000;
+    font-size: 16px;
+    float: right;
+    text-decoration: none;
+}
+
+.footer ul li a img {
+    width: 20px;
+    margin-right: -14px;
+    float: right;
+    margin-top: 1px;
+}
+/*end-main-stylesheet*/
+
+@media screen and (min-width: 1201px) and (max-width: 1345px) {
+
+
+}
+/*
+====================================
+Medium Screen - Others
+====================================
+*/
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+/*---middle-area start---*/
+
+.middle h2 {
+    font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    font-size: 33px;
+}
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+/*---middle-area start---*/
+
+.middle h2 {
+    font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    font-size: 25px;
+    line-height: 36px !important;
+}
+.m-none img {
+    max-width: 360px !important;
+}
+
+.middle p {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 15px;
+}
+
+.middle a {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+}
+
+/*---footer area start---*/
+
+.footer ul li a {
+    font-size: 15px;
+}
+
+.footer ul li a img {
+    width: 19px;
+}
+
+
+}
+/*
+====================================
+Small Screen - Mobile
+====================================
+*/
+@media screen and (min-width: 576px) and (max-width: 767px) {	
+
+/*---header-area start---*/
+
+.head {
+    padding: 32px 15px 53px;
+}
+
+.header img {
+    padding: 4px;
+}
+.visit-btn a {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 10px;
+    line-height: 5px !important;
+    margin-top: 4px;
+}
+
+/*---middle-part start---*/
+
+.mid {
+    padding: 25px 15px 30px;
+}
+
+.middle h2 {
+    font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 40px !important;
+    margin-top: 0px;
+}
+
+.m-none {
+    display: none;
+}
+
+.ds-none {
+    display: block;
+}
+
+.ds-none img {
+    width: 100%;
+}
+
+.middle p {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 24px;
+}
+
+.middle a {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 24px;
+}
+
+/*---footer-area start---*/
+
+.footer ul li a {
+    font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    color: #000;
+    font-size: 16px;
+
+
+}
+.footer ul li a img {
+    width: 13px;
+}
+
+}
+
+/*
+====================================
+Xtra Small Screen - Small Mobile
+====================================
+*/
+@media screen and (max-width: 575px) {
+
+/*---header-area start---*/
+
+.head {
+    padding: 32px 15px 53px;
+}
+
+.header img {
+    padding: 4px;
+    margin-left: -20px;
+}
+.visit-btn a {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 10px;
+    line-height: 5px !important;
+    margin-top: 4px;
+    margin-right: -15px;
+}
+
+/*---middle-part start---*/
+
+.mid {
+    padding: 25px 15px 30px;
+}
+
+.middle h2 {
+    font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    font-size: 21px;
+    letter-spacing: 0;
+    line-height: 31px !important;
+    margin-top: 0px;
+    padding-bottom: 18px;
+}
+
+.m-none {
+    display: none;
+}
+
+.ds-none {
+    display: block;
+}
+
+.ds-none img {
+    width: 100%;
+}
+
+.middle p {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 15px;
+}
+
+.middle a {
+    font-family: "LL Circular Book Web", Helvetica, Arial, sans-serif !important;
+    font-size: 15px;
+}
+
+/*---footer-area start---*/
+
+.footer ul li a {
+    font-family: "LL Circular Bold Web", Helvetica, Arial, sans-serif !important;
+    color: #000;
+    font-size: 14px;
+    margin-left: -15px;
+
+
+}
+
+.footer ul li a img {
+    width: 13px;
+    float: right;
+    margin-right: -15px;
+    margin-top: 5px;
+}
+
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- header-area start -->
+<div class="header">
+    <div class="container">
+        <div class="head">
+            <div class="logo">
+                <img alt="ninja redirect system" src="https://www.ninja.tk/logo.svg" />
+            </div>
+            <div class="s-btn">
+                <ul class="list-unstyled ml-auto">
+                    <li class="visit-btn">
+                        <a title="Visit Sovrn" href="http://www.ninja.tk/?utm_source=blackcat">VISIT NINJA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="middle">
+    <div class="container mid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <h2>Blackcat is a URL shortening service owned by Ninja Tiny Kingdom, LLC.</h2>
+                <div class="ds-none">
+                    <img alt="blackcat is an ad server owned by Ninja Tiny Kingdom LLC" src="https://cdn.ninja.tk/thumb/domain/blackcat.png" />
+                </div>
+                <span></span>
+                <p>If you have questions about the purpose of this domain, or about ninja.tk, please read our <a href="https://www.ninja.tk/work/2-step-redirections/">support documentation</a>.</p>
+                <p>To learn more about Ninja, please visit <a href="https://www.ninja.tk/work/domain-pricing-table/">our website</a>.</p>
+                <p>If you're an owner, admin, editor, user please <a href="/admin/">login admin</a> to edit the site or replace new link.</p>
+
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="m-none">
+                    <img alt="sovrn publisher monetization platform" src="https://cdn.ninja.tk/thumb/domain/blackcat.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-area">
+    <div class="container">
+        <div class="footer">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul compact="list-unstyled">
+                        <li>
+                            <a href="#">Power to the publisher.</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img alt="ninja publisher monetization platform" src="https://www.ninja.tk/favicon.svg" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap jQuery -->
+<!--
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+-->
+<!-- Scroll-Top button -->
+<a href="#" class="scrolltotop"><i class="fas fa-angle-up"></i></a>
+
+</body>
+</html>

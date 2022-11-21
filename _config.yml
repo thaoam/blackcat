@@ -1,0 +1,24 @@
+source: src
+
+collections:
+  directory:
+    output: false
+    permalink: /:title.html
+
+plugins:
+  - jekyll-tidy
+  
+include:
+  - _redirects
+
+exclude:
+  - README.md
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

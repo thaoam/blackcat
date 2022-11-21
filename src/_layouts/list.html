@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>redirect system from ninja</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+  :root {
+    --space: 1rem;
+  }
+  
+  body {
+    width: 90%;
+    max-width: 48rem;
+    margin: calc(2 * var(--space)) auto;
+
+    background: #f9fafb;
+    color: #444;
+
+    font-family: system-ui, -apple-system, "segoe ui", "roboto", "ubuntu", "cantarell", "noto sans", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol", "noto color emoji";
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    padding: 0 var(--space);
+    font-weight: 500;
+    font-size: x-large;
+  }
+
+  main {
+    margin: var(--space) 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border:  1px solid #ccc;
+  }
+
+  td,
+  th {
+    border: 1px solid #E5E7EB;
+    text-align: left;
+    padding: .5rem;
+  }
+
+  th {
+    background: #F6F8FA;
+  }
+
+  tr:nth-child(even) {
+    background: #F6F8FA;
+  }
+
+  table caption {
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: #3b82f6;
+  }
+
+  a:hover, a:active {
+    color: #1d4ed8;
+  }
+</style>
+
+</head>
+<body>
+
+<h1>redirect.ninja.tk from <a href="https://ninja.tk/">ninja</a> v4.0.0</h1>
+
+<main>
+  {{ content }}
+  {%- assign redirects = site.directory | where_exp: "item", "item.redirect_to != nil" -%}
+  <table>
+    {% for page in redirects %}
+    <tr>
+      <td><a href="{{ page.url | relative_url }}" target="_onm">{{ page.url }}</a></td>
+      <td><a href="{{ page.redirect_to }}" target="_onm">{{ page.redirect_to }}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</main>
+
+</body>
+</html>
