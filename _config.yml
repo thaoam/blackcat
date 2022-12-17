@@ -3,7 +3,7 @@ source: src
 collections:
   directory:
     output: false
-    permalink: /:title.html
+    permalink: /:title
 
 plugins:
   - jekyll-tidy
