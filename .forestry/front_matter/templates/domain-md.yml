@@ -1,4 +1,14 @@
 ---
 label: domain.md
 hide_body: true
-fields: []
+fields:
+- name: domain
+  type: text
+  config:
+    required: false
+  label: domain
+- name: redirect_to
+  type: text
+  config:
+    required: false
+  label: redirect_to
