@@ -1,0 +1,10 @@
+---
+label: domain.tld.md
+hide_body: true
+fields:
+- type: text
+  name: domain
+  label: domain
+- type: text
+  name: redirect_to
+  label: redirect_to
