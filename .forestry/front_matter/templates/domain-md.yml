@@ -13,8 +13,7 @@ fields:
     required: false
   label: redirect_to
 pages:
-- src/_directory/keomayman.com.md
-- src/_directory/keomayman.net.md
+- src/_directory/789min.com.md
 - src/_directory/keyle96.net.md
 - src/_directory/new88.ch.md
 - src/_directory/new88.se.md
