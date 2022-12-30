@@ -8,3 +8,5 @@ fields:
 - type: text
   name: redirect_to
   label: redirect_to
+pages:
+- src/_directory/hi88sunshine.com.md
