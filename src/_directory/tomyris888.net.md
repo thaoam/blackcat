@@ -1,5 +1,5 @@
 ---
 domain: tomyris888.net
-redirect_to: https://www.hf888.bet/?uagt=tomyris31798&path=signup
+redirect_to: http://ku456.net/DQ35379
 
 ---
