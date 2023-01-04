@@ -1,5 +1,5 @@
 ---
 domain: tomyris888.net
-redirect_to: http://ku456.net/DQ35379
+redirect_to: https://hf5753.wbet58.com/
 
 ---
