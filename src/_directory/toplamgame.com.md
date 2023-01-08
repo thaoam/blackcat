@@ -1,5 +1,5 @@
 ---
 domain: toplamgame.com
-redirect_to: https://www.hf888.bet/?uagt=hhubby72059&path=signup
+redirect_to: https://www.jun889.vip/?uagt=kave2000&path=signup
 
 ---
